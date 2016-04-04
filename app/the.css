@@ -1,0 +1,10 @@
+body {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 768px;
+  font-family: "Open Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: 100;
+}
