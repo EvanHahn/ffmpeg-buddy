@@ -12,6 +12,22 @@
 
 <h1>ffmpeg buddy</h1>
 
+<form class="pure-form pure-form-aligned">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="input-filename">Input filename</label>
+      <input id="input-filename" type="text" placeholder="input.mp4" data-bind="value: inputFilename">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="output-filename">Output filename</label>
+      <input id="output-filename" type="text" placeholder="output.avi" data-bind="value: outputFilename">
+    </div>
+  </fieldset>
+</form>
+
+<pre data-bind="text: command()"></pre>
+
 <script src="app.js"></script>
 <script>require('initialize');</script>
 

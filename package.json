@@ -5,7 +5,9 @@
     "start": "brunch watch --server",
     "build": "brunch build --production"
   },
-  "dependencies": {},
+  "dependencies": {
+    "knockout-es5": "^0.4.0"
+  },
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",
     "clean-css-brunch": "^2.0.0",
