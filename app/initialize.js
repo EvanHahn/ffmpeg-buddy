@@ -6,13 +6,22 @@ function State () {
   assign(this, {
     inputFilename: 'input.mp4',
     outputFilename: 'output.avi',
+    disableVideo: false,
+    disableAudio: false,
 
     command: function () {
+      var flags = []
+
+      if (this.disableVideo) { flags.push('-vn') }
+      if (this.disableAudio) { flags.push('-an') }
+
       return [
         'ffmpeg',
         '-i', quoteFilename(this.inputFilename),
-        quoteFilename(this.outputFilename)
-      ].join(' ')
+      ]
+      .concat(flags)
+      .concat(quoteFilename(this.outputFilename))
+      .join(' ')
     }
   })
 
