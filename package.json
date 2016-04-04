@@ -1,12 +1,5 @@
 {
-  "name": "brunch-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.1.0",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "private": true,
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build --production"
