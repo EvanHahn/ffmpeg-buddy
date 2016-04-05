@@ -12,6 +12,8 @@ function State () {
     scaleWidth: '100%',
     scaleHeight: '100%',
     framerate: null,
+    startAt: null,
+    endAt: null,
 
     command: function () {
       var flags = []
@@ -19,6 +21,8 @@ function State () {
       if (this.disableVideo) { flags.push('-vn') }
       if (this.disableAudio) { flags.push('-an') }
       if (this.framerate != null) { flags.push('-r ' + this.framerate) }
+      if (this.startAt) { flags.push('-ss ' + this.startAt) }
+      if (this.endAt) { flags.push('-to ' + this.endAt) }
 
       flags = scaleFlags(flags, this.scaleWidth, this.scaleHeight)
 
