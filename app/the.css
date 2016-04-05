@@ -3,12 +3,16 @@ body {
   width: 90%;
   max-width: 768px;
   font-family: "Open Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 16pt;
 }
 
 h1 {
+  text-align: center;
   font-weight: 100;
 }
 
-.pure-form-aligned .pure-control-group {
-  margin-bottom: 3em;
+pre {
+  background-color: #eee;
+  padding: 1em;
+  font-family: Inconsolata, Monaco, Consolas, monospace;
 }
