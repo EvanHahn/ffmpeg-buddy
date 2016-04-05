@@ -11,12 +11,14 @@ function State () {
     disableAudio: false,
     scaleWidth: '100%',
     scaleHeight: '100%',
+    framerate: null,
 
     command: function () {
       var flags = []
 
       if (this.disableVideo) { flags.push('-vn') }
       if (this.disableAudio) { flags.push('-an') }
+      if (this.framerate != null) { flags.push('-r ' + this.framerate) }
 
       flags = scaleFlags(flags, this.scaleWidth, this.scaleHeight)
 
