@@ -1,6 +1,7 @@
 var ko = require('knockout-es5')
 var assign = require('./lib/assign')
 var quoteFilename = require('./lib/quote-filename')
+var scaleFlags = require('./lib/scale-flags')
 
 function State () {
   assign(this, {
@@ -8,6 +9,8 @@ function State () {
     outputFilename: 'output.avi',
     disableVideo: false,
     disableAudio: false,
+    scaleWidth: '100%',
+    scaleHeight: '100%',
 
     command: function () {
       var flags = []
@@ -15,9 +18,11 @@ function State () {
       if (this.disableVideo) { flags.push('-vn') }
       if (this.disableAudio) { flags.push('-an') }
 
+      flags = scaleFlags(flags, this.scaleWidth, this.scaleHeight)
+
       return [
         'ffmpeg',
-        '-i', quoteFilename(this.inputFilename),
+        '-i', quoteFilename(this.inputFilename)
       ]
       .concat(flags)
       .concat(quoteFilename(this.outputFilename))

@@ -8,3 +8,7 @@ body {
 h1 {
   font-weight: 100;
 }
+
+.pure-form-aligned .pure-control-group {
+  margin-bottom: 3em;
+}

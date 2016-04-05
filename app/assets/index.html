@@ -26,13 +26,25 @@
 
     <div class="pure-control-group">
       <label for="disable-video">Disable video?</label>
-      <input id="disable-video" type="checkbox" data-bind="checked: disableVideo" />
+      <input id="disable-video" type="checkbox" data-bind="checked: disableVideo">
     </div>
 
     <div class="pure-control-group">
       <label for="disable-audio">Disable audio?</label>
-      <input id="disable-audio" type="checkbox" data-bind="checked: disableAudio" />
+      <input id="disable-audio" type="checkbox" data-bind="checked: disableAudio">
     </div>
+
+    <span data-bind="visible: !disableVideo">
+      <div class="pure-control-group">
+        <label for="scale-width">Scale width? (Enter a number, a <code>%</code>, or <code>-1</code> to maintain aspect ratio.)</label>
+        <input id="scale-width" type="text" placeholder="100%" data-bind="value: scaleWidth">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="scale-height">Scale height? (Enter a number, a <code>%</code>, or <code>-1</code> to maintain aspect ratio.)</label>
+        <input id="scale-height" type="text" placeholder="100%" data-bind="value: scaleHeight">
+      </div>
+    </span>
   </fieldset>
 </form>
 

@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "pretest": "standard",
-    "test": "mocha",
+    "test": "mocha spec/**/*.js",
     "start": "brunch watch --server",
     "build": "brunch build --production"
   },
