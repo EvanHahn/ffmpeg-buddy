@@ -1,18 +1,30 @@
 body {
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
   max-width: 768px;
   font-family: "Open Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
   font-size: 16pt;
 }
 
-h1 {
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+h1, h2 {
   text-align: center;
   font-weight: 100;
+}
+
+h2 {
+  font-size: 16pt;
 }
 
 pre {
   background-color: #eee;
   padding: 1em;
   font-family: Inconsolata, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
 }

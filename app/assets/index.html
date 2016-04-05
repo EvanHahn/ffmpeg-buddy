@@ -11,6 +11,9 @@
 <body>
 
 <h1>ffmpeg buddy</h1>
+<h2>a friend to help you build <a href="https://ffmpeg.org/">ffmpeg</a> commands</h2>
+
+<pre data-bind="text: command()"></pre>
 
 <form class="pure-form pure-form-aligned">
   <fieldset>
@@ -62,8 +65,6 @@
     </div>
   </fieldset>
 </form>
-
-<pre data-bind="text: command()"></pre>
 
 <script src="app.js"></script>
 <script>require('initialize');</script>
