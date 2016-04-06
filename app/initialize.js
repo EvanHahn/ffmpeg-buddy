@@ -24,8 +24,8 @@ function State () {
       if (this.disableVideo) { flags.push('-vn') }
       if (this.disableAudio) { flags.push('-an') }
       if (this.framerate != null) { flags.push('-r ' + this.framerate) }
-      if (this.startAt) { flags.push('-ss ' + this.startAt) }
-      if (this.endAt) { flags.push('-to ' + this.endAt) }
+      if (this.startAt) { flags.push("-ss '" + this.startAt + "'") }
+      if (this.endAt) { flags.push("-to '" + this.endAt + "'") }
       flags = scaleFlags(flags, this.scaleWidth, this.scaleHeight)
       flags = rotationFlags(flags, this.rotation)
 
