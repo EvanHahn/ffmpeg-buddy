@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  padding-bottom: 1em;
   width: 95%;
   max-width: 768px;
   font-family: "Open Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
@@ -11,7 +12,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, footer {
   text-align: center;
   font-weight: 100;
 }
