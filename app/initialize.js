@@ -29,8 +29,6 @@ function State () {
       flags = scaleFlags(flags, this.scaleWidth, this.scaleHeight)
       flags = rotationFlags(flags, this.rotation)
 
-      console.log(this.rotation)
-
       return [
         'ffmpeg',
         '-i', quoteFilename(this.inputFilename)
