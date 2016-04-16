@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>ffmpeg buddy</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+
+<h1>ffmpeg buddy</h1>
+<h2>a friend to help you build <a href="https://ffmpeg.org/">ffmpeg</a> commands</h2>
+
+<pre data-bind="text: command()"></pre>
+
+<form class="pure-form pure-form-aligned">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="input-filename">Input filename</label>
+      <input id="input-filename" type="text" placeholder="input.mp4" data-bind="value: inputFilename">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="output-filename">Output filename</label>
+      <input id="output-filename" type="text" placeholder="output.avi" data-bind="value: outputFilename">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="disable-video">Disable video?</label>
+      <input id="disable-video" type="checkbox" data-bind="checked: disableVideo">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="disable-audio">Disable audio?</label>
+      <input id="disable-audio" type="checkbox" data-bind="checked: disableAudio">
+    </div>
+
+    <span data-bind="visible: !disableVideo">
+      <div class="pure-control-group">
+        <label for="scale-width">Scale width (enter a number, a <code>%</code>, or <code>-1</code> to maintain aspect ratio.)</label>
+        <input id="scale-width" type="text" placeholder="100%" data-bind="value: scaleWidth">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="scale-height">Scale height (enter a number, a <code>%</code>, or <code>-1</code> to maintain aspect ratio.)</label>
+        <input id="scale-height" type="text" placeholder="100%" data-bind="value: scaleHeight">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="framerate">Framerate</label>
+        <input id="framerate" type="number" placeholder="24" data-bind="value: framerate">
+      </div>
+
+      <div class="pure-control-group">
+        <label for="rotate">Rotate</label>
+        <select id="rotate" data-bind="options: rotationOptions, value: rotation"></select>
+      </div>
+    </span>
+
+    <div class="pure-control-group">
+      <label for="start-at">Start time (HH:MM:SS)</label>
+      <input id="start-at" type="text" placeholder="00:00:00" data-bind="value: startAt">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="end-at">End time (HH:MM:SS)</label>
+      <input id="end-at" type="text" placeholder="00:00:00" data-bind="value: endAt">
+    </div>
+  </fieldset>
+</form>
+
+<script src="app.js"></script>
+<script>require('initialize');</script>
+
+<footer>Made by <a class="evanhahn-link" href="http://evanhahn.com">Evan Hahn</a>, lord of the dance</footer>
+
+</body>
+</html>
