@@ -11,9 +11,9 @@
     "knockout-es5": "^0.4.0"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2.0.0",
+    "auto-reload-brunch": "^2.7.1",
     "brunch": "^3.0.0",
-    "clean-css-brunch": "^2.0.0",
+    "clean-css-brunch": "^3.0.0",
     "css-brunch": "^2.0.0",
     "javascript-brunch": "^2.0.0",
     "mocha": "^7.1.0",
