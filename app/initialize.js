@@ -33,9 +33,9 @@ function State () {
         'ffmpeg',
         '-i', quoteFilename(this.inputFilename)
       ]
-      .concat(flags)
-      .concat(quoteFilename(this.outputFilename))
-      .join(' ')
+        .concat(flags)
+        .concat(quoteFilename(this.outputFilename))
+        .join(' ')
     }
   })
 
