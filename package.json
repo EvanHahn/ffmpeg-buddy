@@ -7,8 +7,8 @@
     "build": "brunch build --production"
   },
   "dependencies": {
-    "knockout": "^3.4.1",
-    "knockout-es5": "^0.4.0"
+    "knockout": "^3.5.1",
+    "knockout-es5": "^0.4.5"
   },
   "devDependencies": {
     "brunch": "^4.0.0",
