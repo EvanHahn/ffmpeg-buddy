@@ -11,11 +11,11 @@
     "knockout-es5": "^0.4.0"
   },
   "devDependencies": {
-    "brunch": "^3.0.0",
+    "brunch": "^4.0.0",
     "clean-css-brunch": "^3.0.0",
     "css-brunch": "^2.10.0",
     "javascript-brunch": "^2.10.0",
-    "mocha": "^8.2.0",
+    "mocha": "^8.3.1",
     "standard": "^16.0.3",
     "uglify-js-brunch": "^2.10.0"
   },
