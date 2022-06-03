@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "serve src",
     "pretest": "npm run lint",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint .",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "ava": "^4.1.0",
     "eslint": "^8.11.0",
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "serve": "^13.0.2"
   }
 }

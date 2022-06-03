@@ -1,4 +1,4 @@
-/* global outputEl, formEl, inputFilenameEl, outputFilenameEl, disableVideoEl, disableAudioEl, scaleWidthEl, scaleHeightEl, framerateEl, rotateEl, startAtEl, endAtEl */
+/* global outputEl, formEl, inputFilenameEl, outputFilenameEl, disableVideoEl, disableAudioEl, scaleWidthEl, scaleHeightEl, framerateEl, rotateEl, flipEl, startAtEl, endAtEl */
 
 import quoteFilename from "./lib/quote-filename.js";
 import getScaleFlag from "./lib/get-scale-flag.js";
@@ -10,11 +10,12 @@ function render() {
   const hasVideo = !disableVideoEl.checked;
   const hasAudio = !disableAudioEl.checked;
 
-  let videoFlags = [];
+  const videoFlags = [];
   if (hasVideo) {
     const scaleFlag = getScaleFlag(scaleWidthEl.value, scaleHeightEl.value);
     const framerate = parseInt(framerateEl.value.trim(), 10) || null;
     const rotation = rotateEl.value;
+    const flip = flipEl.value;
     if (scaleFlag) {
       videoFlags.push(scaleFlag);
     }
@@ -23,6 +24,9 @@ function render() {
     }
     if (rotation !== "no rotation") {
       videoFlags.push(rotation);
+    }
+    if (flip !== "no flip") {
+      videoFlags.push(flip);
     }
   } else {
     videoFlags.push("-vn");
