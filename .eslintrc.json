@@ -7,7 +7,5 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "reportUnusedDisableDirectives": true,
-  "root": true,
   "rules": {}
 }
